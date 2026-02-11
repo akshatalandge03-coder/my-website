@@ -1,0 +1,5 @@
+[
+  { "name": "Rose Bouquet", "price": "$20", "img": "images/pexels-tatev-manukyan-703134445-32316798.JPG" },
+  { "name": "Tulip Delight", "price": "$18", "img": "images/pexels-lalezarfa-61078864-8116307.JPG" },
+  { "name": "Sunflower Surprise", "price": "$22", "img": "images/pexels-subhro-dey-david-1495028-32300948.JPG" }
+]
