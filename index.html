@@ -3,116 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Flower Shop</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <title>Digital Flower's Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Petals -->
-  <div id="petal-container"></div>
+<header class="main-header">
+  <div class="logo">🌸 Bloom's</div>
+  <nav id="navbar">
+    <a href="#home"><i class="fas fa-home"></i> Home</a>
+    <a href="#our-flowers"><i class="fas fa-seedling"></i> Shop</a>
+    <a href="#bestsellers"><i class="fas fa-star"></i> Bestsellers</a>
+    <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+    <a href="#cart"><i class="fas fa-shopping-cart"></i> Cart <span id="cart-count">0</span></a>
+  </nav>
+  <i class="fas fa-bars hamburger" onclick="toggleMenu()"></i>
+</header>
 
-  <!-- Header -->
-  <header>
-    <h1>Flower Shop 🌸</h1>
-    <nav class="nav-container">
-      <button id="menu-toggle"><i class="fas fa-bars"></i></button>
-      <ul id="nav-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#flowers">Our Flowers</a></li>
-        <li><a href="#bestsellers">Bestsellers</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><button id="toggle-cart">Cart 🛒</button></li>
-      </ul>
-    </nav>
-  </header>
+<!-- HERO -->
+<section id="home" class="hero-section">
+  <div class="hero-content">
+    <h1>Fresh Flowers, Delivered With Love</h1>
+    <p>Elegant bouquets crafted for every special moment.</p>
+    <a href="#our-flowers" class="hero-btn">Shop Now</a>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section id="home" class="hero-section">
-    <div class="hero-text">
-      <h2>Welcome to Our Flower Shop</h2>
-      <p>Beautiful flowers for every moment 🌷</p>
-    </div>
-  </section>
+<!-- OUR FLOWERS -->
+<section id="our-flowers" class="section-block">
+  <h2>Our Collection 🌸</h2>
+  <div class="slider-wrapper">
+    <button class="scroll-btn left" onclick="scrollFlowers(-1)"><i class="fas fa-chevron-left"></i></button>
+    <div id="flowers" class="flower-container"></div>
+    <button class="scroll-btn right" onclick="scrollFlowers(1)"><i class="fas fa-chevron-right"></i></button>
+  </div>
+</section>
 
-  <!-- Flowers -->
-  <section id="flowers">
-    <h2>Our Flowers</h2>
-    <div id="flower-products" class="flower-container">
-      <!-- Example Flower Cards -->
-      <div class="flower-card">
-        <img src="images/flower1.jpg" alt="Flower 1">
-        <h3>Rose Bouquet</h3>
-        <p>$20</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="flower-card">
-        <img src="images/flower2.jpg" alt="Flower 2">
-        <h3>Lily Arrangement</h3>
-        <p>$25</p>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  </section>
+<!-- BESTSELLERS -->
+<section id="bestsellers" class="section-block light-bg">
+  <h2>Bestsellers</h2>
+  <div id="bestseller-flowers" class="flower-container"></div>
+</section>
 
-  <!-- Bestsellers -->
-  <section id="bestsellers">
-    <h2>Bestsellers 🌟</h2>
-    <div id="bestseller-products" class="flower-container">
-      <!-- Example Bestsellers -->
-      <div class="flower-card">
-        <img src="images/flower3.jpg" alt="Flower 3">
-        <h3>Sunflower Bundle</h3>
-        <p>$18</p>
-        <button>Add to Cart</button>
-      </div>
-      <div class="flower-card">
-        <img src="images/flower4.jpg" alt="Flower 4">
-        <h3>Tulip Mix</h3>
-        <p>$22</p>
-        <button>Add to Cart</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <div class="about-media">
-      <img src="images/2snllno3.png" alt="About us">
-    </div>
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <!-- Original About -->
+  <div class="about-block">
+    <div class="about-img"><img src="images/carrie-beth-williams-s3AFTBZ3cnc-unsplash.jpg" alt="About Bloom's"></div>
     <div class="about-text">
-      <h2>About Us</h2>
-      <p>We deliver happiness through flowers 💐. Our mission is to make every occasion special with beautiful blooms and arrangements tailored just for you.</p>
+      <h2>About Bloom's</h2>
+      <p>We combine technology and artistry to deliver fresh, handcrafted floral arrangements straight to your door. Each bouquet is carefully crafted to bring joy and elegance to every special moment.</p>
     </div>
-  </section>
-
-  <!-- Reviews -->
-  <section id="reviews">
-    <h2>Customer Reviews</h2>
-    <div class="review-container">
-      <div class="review-card">
-        <i class="fas fa-quote-left"></i>
-        <p>"Beautiful flowers, fast delivery! Highly recommend 🌸"</p>
-        <h4>- Sarah</h4>
-      </div>
-      <div class="review-card">
-        <i class="fas fa-quote-left"></i>
-        <p>"My friends loved the bouquet. Perfect service 💐"</p>
-        <h4>- John</h4>
-      </div>
+  </div>
+  <!-- About Block 1 -->
+  <div class="about-block">
+    <div class="about-img"><img src="images/pexels-bride-1850126_1920.jpg" alt="Our Creative Team"></div>
+    <div class="about-text">
+      <h2>Our Vision</h2>
+      <p>We envision a world where every celebration is brightened by the perfect bouquet. Our goal is to make floral gifting seamless, personal, and memorable for everyone.</p>
     </div>
-  </section>
+  </div>
+  <!-- About Block 2 -->
+  <div class="about-block">
+    <div class="about-img"><img src="images/cindy-chan-1D_QE7gj4-4-unsplash.jpg" alt="Our Workspace"></div>
+    <div class="about-text">
+      <h2>Our Workspace</h2>
+      <p>A cozy and inspiring space where ideas bloom. We carefully select flowers and craft each bouquet in a clean, vibrant environment for top-quality results.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Cart -->
-  <section id="cart" style="display:none;">
-    <h2>Your Cart</h2>
-    <ul id="cart-items"></ul>
-    <p>Total: $<span id="total">0</span></p>
-    <button onclick="checkout()">Checkout</button>
-  </section>
+<!-- CART -->
+<section id="cart" class="cart-section">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <p>Total: $<span id="total">0.00</span></p>
+  <button onclick="checkout()">Checkout</button>
+</section>
 
-  <script src="script.js"></script>
+
+<!-- REVIEWS / TESTIMONIALS -->
+<section id="reviews" class="section-block light-bg">
+  <h2>What Our Customers Say 🌸</h2>
+  <div class="reviews-container">
+    <div class="review-card">
+      <p>"Bloom's bouquets made my anniversary unforgettable! The flowers were fresh and beautifully arranged."</p>
+      <h4>— Emily R.</h4>
+    </div>
+    <div class="review-card">
+      <p>"Excellent service and fast delivery. The bouquets are always stunning and full of life."</p>
+      <h4>— James K.</h4>
+    </div>
+    <div class="review-card">
+      <p>"The attention to detail is amazing. I always get compliments when I gift Bloom's arrangements."</p>
+      <h4>— Sophia L.</h4>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & LOGIN -->
+<section id="contact" class="section-block">
+  <h2>Get in Touch 🌸</h2>
+  <div class="contact-wrapper">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p><strong>Email:</strong> <a href="mailto:info@bloomsboutique.com">info@bloomsboutique.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+1234567890">+1 234 567 890</a></p>
+      <p><strong>Follow us:</strong></p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/yourprofile" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/yourprofile" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/yourprofile" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+      <button class="login-btn">Login</button>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+<footer>
+  <p>
+    © <span id="year"></span> Bloom's Flower Boutique
+    <span class="social-icons">
+      <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+    </span>
+  </p>
+</footer>
+
+
+<script src="script.js"></script>
 </body>
 </html>
